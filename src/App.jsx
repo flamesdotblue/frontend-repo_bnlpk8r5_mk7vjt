@@ -1,28 +1,20 @@
-import { useState } from 'react'
+import React from 'react';
+import Hero from './components/Hero';
+import SummaryCards from './components/SummaryCards';
+import MetricsPanel from './components/MetricsPanel';
+import RunTable from './components/RunTable';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen w-full bg-gradient-to-br from-[#0B0C10] via-[#0E1117] to-[#0B0C10] text-white">
+      <div className="mx-auto max-w-7xl px-4 py-6 md:py-10 space-y-6">
+        <Hero />
+        <SummaryCards />
+        <MetricsPanel />
+        <RunTable />
       </div>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
